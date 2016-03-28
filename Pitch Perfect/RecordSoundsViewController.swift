@@ -58,13 +58,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = false
         recordingInProgress.hidden = false
         stopButton.hidden = false
-        //TODO: Record the user's voice
+        
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
      
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
+        //print(filePath)
         
         do {
             let session = AVAudioSession.sharedInstance()
